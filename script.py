@@ -31,7 +31,7 @@ def main():
   totals = {}
   timeperiod = float(raw_input("Time Period in Months: "))
   window = int(round(timeperiod/12*365/7))
-  symbols = raw_input("symbols: ")
+  symbols = raw_input("Symbols: ")
   symbol_list = [symbol.lower().strip() for symbol in symbols.split(",")]
 
   for symbol in symbol_list:
