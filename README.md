@@ -3,7 +3,7 @@ A simple Python script that gives you the best, worst, and latest stock portfoli
 
 This assumes you have equally invested your assets into each stock you give for your portfolio. Uses Yahoo! Finance as a historical stock data source.
 
-You can use this tool so mix and match different portfolio options and quickly analyze its historical and latest performace. This also produces a text file (`out.txt`) with the performance for every time frame up to the present.
+You can use this tool to mix and match different portfolio options and quickly analyze its historical and latest performance. This also produces a text file (`out.txt`) with the performance for every time frame up to the present.
 
 ##Running
 ```
