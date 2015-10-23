@@ -5,7 +5,7 @@ import collections
 def printsymbols(sym_totals):
   result = {}
   for symbol, changes in reversed(sorted(sym_totals.iteritems(), key=lambda x: sym_totals[x[0]])):
-    print symbol + "    " + str(changes)
+    print symbol + "    " + str(changes) + "%"
   print "\n"
   
 def decode_files(sym_list, window):
