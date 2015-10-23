@@ -66,6 +66,7 @@ def main():
   printsymbols(data[lowest_date])
   print "LATEST: " + latest
   printsymbols(data[latest_date])
+  out.close()
 
 if __name__=="__main__":
   main()
