@@ -35,10 +35,10 @@ def main():
   symbol_list = [symbol.lower().strip() for symbol in symbols.split(",")]
 
   for symbol in symbol_list:
-	  url = "http://ichart.finance.yahoo.com/table.csv?s=" + symbol.upper() + "&g=w"
-	  if os.path.isfile(symbol+".csv"):
-		  os.remove(symbol+".csv")
-	  urllib.urlretrieve(url, symbol.lower()+".csv")
+    url = "http://ichart.finance.yahoo.com/table.csv?s=" + symbol.upper() + "&g=w"
+    if os.path.isfile(symbol+".csv"):
+  	  os.remove(symbol+".csv")
+    urllib.urlretrieve(url, symbol.lower()+".csv")
   data, dates = decode_files(symbol_list, window)
 
   for date in sorted(dates.keys()):
