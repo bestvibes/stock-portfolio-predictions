@@ -13,18 +13,18 @@ Symbols: aapl,goog
 
 
 HIGHEST: 20150406 - 20140407    38.12%
-aapl    74.47
-goog    1.77
+aapl    74.47%
+goog    1.77%
 
 
 LOWEST: 20150817 - 20140818    5.65%
-aapl    6.17
-goog    5.14
+aapl    6.17%
+goog    5.14%
 
 
 LATEST: 20151019 - 20141020    16.20%
-goog    20.75
-aapl    11.65
+goog    20.75%
+aapl    11.65%
 ```
 
 Snippet from `out.txt` from above command:
