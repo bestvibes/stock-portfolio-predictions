@@ -7,7 +7,7 @@ You can use this tool to **mix and match different portfolio options and quickly
 
 ##Running
 ```
-Vaibhavs-MacBook-Pro:stocks vaibhavaggarwal$ python script.py 
+Vaibhavs-MacBook-Pro:stocks vaibhavaggarwal$ python stock_script.py 
 Time Period in Months: 12  
 Symbols: aapl,googl
 
