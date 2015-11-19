@@ -1,5 +1,5 @@
 #stock-portfolio-predictions
-A simple Python script that gives you the **best, worst, and latest stock portfolio performace** over a given frame of time.
+A simple Python script that gives you the **best, worst, and latest stock portfolio performance** over a given frame of time.
 
 **This assumes you have equally invested your assets** into each stock you give for your portfolio. More flexibility with this is in the works. Uses Yahoo! Finance as a historical stock data source.
 
