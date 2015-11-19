@@ -1,44 +1,42 @@
 #stock-portfolio-predictions
-A simple Python script that gives you the best, worst, and latest stock portfolio performace over a given frame of time.
+A simple Python script that gives you the **best, worst, and latest stock portfolio performace** over a given frame of time.
 
-This assumes you have equally invested your assets into each stock you give for your portfolio. Uses Yahoo! Finance as a historical stock data source.
+**This assumes you have equally invested your assets** into each stock you give for your portfolio. More flexibility with this is in the works. Uses Yahoo! Finance as a historical stock data source.
 
-You can use this tool to mix and match different portfolio options and quickly analyze its historical and latest performance. This also produces a text file (`out.txt`) with the performance for every time frame up to the present.
+You can use this tool to **mix and match different portfolio options and quickly analyze its historical and latest performance**. This also produces a text file (`out.txt`) with the performance for every time frame up to the present.
 
 ##Running
 ```
-Vaibhavs-MacBook-Pro:stock-portfolio-performance vaibhavaggarwal$ python script.py 
-Time Period in Months: 12
-Symbols: aapl,goog
+Vaibhavs-MacBook-Pro:stocks vaibhavaggarwal$ python script.py 
+Time Period in Months: 12  
+Symbols: aapl,googl
 
 
-HIGHEST: 20150406 - 20140407    38.12%
-aapl    74.47%
-goog    1.77%
+HIGHEST: 20040907 - 20050906    185.03%
+aapl    186.09%
+googl    183.96%
 
+LOWEST: 20071224 - 20081222    -57.16%
+aapl    -57.06%
+googl    -57.25%
 
-LOWEST: 20150817 - 20140818    5.65%
-aapl    6.17%
-goog    5.14%
-
-
-LATEST: 20151019 - 20141020    16.20%
-goog    20.75%
-aapl    11.65%
+LATEST: 20141117 - 20151116    20.82%
+googl    39.22%
+aapl    2.42%
 ```
 
 Snippet from `out.txt` from above command:
 ```
-20150330 - 20140331    33.34%
-20150406 - 20140407    38.12%
-20150413 - 20140414    33.63%
-20150420 - 20140421    35.98%
-20150427 - 20140428    28.55%
-20150504 - 20140505    29.50%
-20150511 - 20140512    28.02%
-20150518 - 20140519    25.72%
-20150526 - 20140527    20.82%
-20150601 - 20140602    18.90%
+20041004 - 20051003    144.96%
+20041011 - 20051010    121.43%
+20041018 - 20051017    115.96%
+20041025 - 20051024    97.89%
+20041101 - 20051031    127.03%
+20041108 - 20051107    118.14%
+20041115 - 20051114    135.14%
+20041122 - 20051121    126.89%
+20041129 - 20051128    131.64%
+20041206 - 20051205    133.28%
 ```
 
 ##Notes
