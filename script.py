@@ -20,13 +20,13 @@ def decode_files(window, symbol_list):
       lines = sym_file.readlines()
     for start_row in range(1, len(lines)-window-1):
       new_window = window + start_row
-      start_cols = lines[start_row].split(",")
-      start_date = int(start_cols[0].replace("-", ""))
-      start_price = float(start_cols[6])
-      end_cols = lines[new_window].split(",")
+      end_cols = lines[start_row].split(",")
       end_date = int(end_cols[0].replace("-", ""))
       end_price = float(end_cols[6])
-      data[start_date][sym] = round((start_price-end_price)/end_price*100, 2)
+      start_cols = lines[new_window].split(",")
+      start_date = int(start_cols[0].replace("-", ""))
+      start_price = float(start_cols[6])
+      data[start_date][sym] = round((end_price-start_price)/start_price*100, 2)
       date_ranges[start_date] = end_date
 
 def calculate_performance(window, symbol_list):
