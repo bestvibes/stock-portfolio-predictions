@@ -8,10 +8,11 @@ date_ranges = {}
 data = collections.defaultdict(dict)
 file_output = []
 
-def printsymbols(sym_totals):
+def printsymbols(sym_totals, output):
   for symbol, changes in reversed(sorted(sym_totals.iteritems(), key=lambda x: sym_totals[x[0]])):
-    print "%s    %s%%" % (symbol, changes)
-  print "\n"
+    output += "%s    %s%%\n" % (symbol, changes)
+  output += "\n"
+  return output
   
 def decode_files(window, symbol_list):
   global data, date_ranges
@@ -53,20 +54,21 @@ def calculate_performance(window, symbol_list):
   lowest = "%s - %s    %.2f%%" % (lowest_date, date_ranges[lowest_date], totals[lowest_date])
   latest_date = sorted(date_ranges.keys())[-1]
   latest = "%s - %s    %.2f%%" % (latest_date, date_ranges[latest_date], totals[latest_date])
-  file_output.append("HIGHEST: %s\n" % highest)
-  file_output.append("LOWEST: %s\n" % lowest)
-  file_output.append("LATEST: %s\n" % latest)
 
-  print "\n\nHIGHEST: %s" % highest
-  printsymbols(data[highest_date])
-  print "LOWEST: %s" % lowest
-  printsymbols(data[lowest_date])
-  print "LATEST: %s" % latest
-  printsymbols(data[latest_date])
+  output = ""
+  output += "\n\nHIGHEST: %s\n" % highest
+  output = printsymbols(data[highest_date], output)
+  output += "LOWEST: %s\n" % lowest
+  output = printsymbols(data[lowest_date], output)
+  output += "LATEST: %s\n" % latest
+  output = printsymbols(data[latest_date], output)
+  file_output.append(output)
 
   for symbol in symbol_list:
     if os.path.isfile("%s.csv" % symbol):
   	  os.remove("%s.csv" % symbol)
+
+  return output
   
 
 def main():
@@ -76,7 +78,8 @@ def main():
   symbols = raw_input("Symbols: ")
   symbol_list = [symbol.lower().strip() for symbol in symbols.split(",") if " " not in symbol.strip()]
 
-  calculate_performance(window, symbol_list)
+  output = calculate_performance(window, symbol_list)
+  print output
   
   out.write(''.join(file_output))
   out.flush()
