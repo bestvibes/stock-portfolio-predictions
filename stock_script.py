@@ -36,7 +36,7 @@ def calculate_performance(window, symbol_list):
     url = "http://ichart.finance.yahoo.com/table.csv?s=%s&g=w" % symbol.upper()
     if os.path.isfile("%s.csv" % symbol):
   	  os.remove("%s.csv" % symbol)
-    urllib.urlretrieve(url, "%s.csv" % symbol.lower())
+    urllib.urlretrieve(url, "%s.csv" % symbol)
   decode_files(window, symbol_list)
 
   for date in sorted(date_ranges.keys()):
